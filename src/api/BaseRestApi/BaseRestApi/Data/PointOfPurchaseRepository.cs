@@ -27,9 +27,9 @@ namespace BaseRestApi.Data
             return pointOfPurchasesLis;
         }
 
-        public List<PointOfPurchaseDto> GetPointOfPurchases()
-        {
-            throw new NotImplementedException();
-        }
+        // public List<PointOfPurchaseDto> GetPointOfPurchases()
+        // {
+        //     throw new NotImplementedException();
+        // }
     }
 }

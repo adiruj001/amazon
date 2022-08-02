@@ -30,7 +30,7 @@ namespace BaseRestApi.Services
         public Result<List<PointOfPurchaseDto>> GetPointOfPurchase()
         {
             Result<List<PointOfPurchaseDto>> result = new Result<List<PointOfPurchaseDto>>(Trace);
-            List<PointOfPurchaseDto> createResult = PointOfPurchaseRepository.GetPointOfPurchases();
+            List<PointOfPurchaseDto> createResult = PointOfPurchaseRepository.GetPointOfPurchase();
             result.Success = true;
             result.Message = AppSettings.SuccessMessage.GetSuccess;
             result.Data = createResult;

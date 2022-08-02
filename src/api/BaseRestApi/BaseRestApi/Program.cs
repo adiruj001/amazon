@@ -37,6 +37,7 @@ builder.Services.AddTransient<AppSettings>(x => { return appSettings; });
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddTransient<ITrace, Trace>();
 builder.Services.AddTransient<IJwtService, JwtService>();
+builder.Services.AddTransient<IAccountService, AccountService>();
 builder.Services.AddTransient<IPointOfPurchaseRepository, PointOfPurchaseRepository>();
 builder.Services.AddTransient<IPointOfPurchaseService, PointOfPurchaseService>();
 
@@ -80,6 +81,7 @@ app.UseStaticFiles();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+app.UseAuthentication();
 
 app.MapControllers();
 
